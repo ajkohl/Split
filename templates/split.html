@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="pagetitle">
+    Split
+    <!-- creates particles for dynamic background -->
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<form method="post" action="/split" enctype="multipart/form-data">
+
+    <!-- Text entry form -->
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="debtorsString" placeholder="Who owes you?" type="text">
+    </div>
+
+    <!-- Text entry form -->
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="amount" placeholder="How much to split?" type="int">
+    </div>
+
+    <p>
+        <input class="subbut" type="submit" value="Submit">
+    </p>
+
+</form>
+{% endblock %}

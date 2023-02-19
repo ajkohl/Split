@@ -1,0 +1,41 @@
+{% extends "layout.html" %}{% block title %} Home {% endblock %} {% block main %}
+<main class="container py-5 text-center">
+
+    <div class="pagetitle">
+        Who You Owe
+        <!-- creates particles for dynamic background -->
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-start">Name</th>
+                <th class="text-start">Amount</th>
+                <th class="text-start">Date</th>
+            </tr>
+        </thead>
+       <tbody>
+        {% for debt in debts %}
+                <tr>
+                    <td>{{ debt.Creditor }}</td>
+                    <td>${{ debt.Amount }}</td>
+                    <td>{{ debt.Date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+        </main>
+{% endblock %}

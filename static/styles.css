@@ -1,0 +1,293 @@
+/* Fixes Footer to Always be at the bottom. */
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(5deg, #00bfff, #9400d3, #0000FF);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 29s ease infinite;
+  animation: AnimationName 29s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:90% 0%}
+  50%{background-position:11% 100%}
+  100%{background-position:90% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:90% 0%}
+  50%{background-position:11% 100%}
+  100%{background-position:90% 0%}
+}
+
+
+nav
+{
+  border-bottom: 2px solid #ffffff;
+}
+nav .navbar-brand
+{
+    font-size: xx-large;
+    color: #ffffff;
+}
+
+nav .navbar-brand:hover
+{
+  transition: all .2s ease;
+  cursor: pointer;
+  text-shadow: rgba(255,255,255,0.88) 0px 0px 39px;
+}
+
+nav .nav-link
+{
+    color: #ffffff;
+}
+
+nav .nav-link:hover
+{
+    text-shadow: rgba(255,255,255,0.88) 0px 0px 39px;
+}
+
+tr
+{
+    text-align: left
+}
+
+.table
+{
+    color: #ffffff;
+}
+
+.file-upload
+{
+    background-color: #343a40;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.file-upload-btn
+{
+    width: 20%;
+    margin: 0;
+    color: #fff;
+    background: #1355A1;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #ffffff;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.file-upload-btn:hover
+{
+  background: #6495ED;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active
+{
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content
+{
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input
+{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-image
+{
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.subbut:hover
+{
+  background: #6495ED;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.pagetitle
+{
+  color: #ffffff;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  text-decoration-line: underline;
+  text-decoration-style: "solid";
+  text-decoration-color: rgba(255,255,255,0.72);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+h3
+{
+  color: white;
+  text-align: left;
+  margin-left: 100px;
+}

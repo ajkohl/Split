@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="pagetitle">
+    Pay Someone
+
+    <!-- creates particles for dynamic background -->
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<form action="/pay" method="post">
+
+    <form action="/pay" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="payee">
+                <option disabled selected>Who Do you Want to Pay</option>
+                    {% for creditor in creditors %}
+                            <tr>
+                                <option value="{{ (creditor.get('Creditor')) }}">{{ creditor.get('Creditor') }}</option>
+                            </tr>
+                        {% endfor %}
+            </select>
+
+            <p></p>
+
+            <select class="form-select mx-auto w-auto" name="amount" type="float">
+                <option disabled selected>Amount</option>
+                    {% for amount in amounts %}
+                                <option value="{{ amount.Amount }}">${{ amount.Amount }}</option>
+                        {% endfor %}
+            </select>
+
+            <p> </p>
+    <button class="btn btn-primary" type="submit">Pay</button>
+</form>
+{% endblock %}
